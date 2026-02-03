@@ -1,0 +1,122 @@
+.detail-container {
+  padding: 40px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .navigation {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    
+    .btn-return {
+      display: inline-block;
+      background-color: #ffcc01;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+        background-color: #ffe066;
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .evolutions-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    min-width: 300px;
+
+    h3 {
+      color: white;
+      font-family: sans-serif;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #ffcc01;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .evolution-list {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .evo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s;
+        opacity: 0.5;
+
+        &.current {
+          opacity: 1;
+          transform: scale(1.15);
+          
+          .evo-img-wrapper {
+            border-color: #ffcc01;
+            box-shadow: 0 0 15px rgba(255, 204, 1, 0.6);
+          }
+          
+          span {
+            color: #ffcc01;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+
+        .evo-img-wrapper {
+          width: 80px;
+          height: 80px;
+          background-color: rgba(0,0,0,0.3);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+          border: 3px solid transparent; 
+          transition: all 0.2s;
+
+          img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+          }
+        }
+        
+        span {
+          font-weight: bold;
+          font-family: sans-serif;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

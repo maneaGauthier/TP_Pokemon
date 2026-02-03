@@ -1,0 +1,25 @@
+:root {
+  --green: rgba(61, 122, 107, 1);
+}
+
+body {
+  background-color: #414141;
+  font-family: sans-serif;
+  margin: 0;
+  padding-left: 80px; 
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2%;
+  min-height: 80vh;
+}
